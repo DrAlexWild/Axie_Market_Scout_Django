@@ -46,8 +46,8 @@ def main_view(request):
     )"""
 
 
-    #request.session['new_graph'] = chart
-    request.session['num'] = 0
+    """#request.session['new_graph'] = chart
+    request.session['num'] = 0"""
 
 
     context = {
