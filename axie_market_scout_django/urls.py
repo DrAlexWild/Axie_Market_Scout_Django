@@ -23,5 +23,5 @@ from axie_market_scout_app.views import main_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_view),
-    path('results/', secondary_view)
+    path('updated/', secondary_view)
 ]
