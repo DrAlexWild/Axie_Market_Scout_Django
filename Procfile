@@ -1,1 +1,1 @@
-web: python Axie_Market_Scout_Django/manage.py run_gunicorn --bind=0.0.0.0:$PORT
+web: gunicorn axie_market_scout_django.wsgi
