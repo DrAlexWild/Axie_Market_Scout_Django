@@ -22,6 +22,6 @@ from axie_market_scout_app.views import main_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('https://axie-market-scout-django.herokuapp.com/', main_view),
+    path('/', main_view),
     path('results/', secondary_view)
 ]
