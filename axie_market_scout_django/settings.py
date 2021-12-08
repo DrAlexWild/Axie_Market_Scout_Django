@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mhkb@&h@1xo4uhafu^(#n&e#^=f@ur*)c2@&4v9a0x0ghi+)6d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['axie-market-scout-django.herokuapp.com']
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 # Application definition
