@@ -60,8 +60,6 @@ def main_view(request):
 
 def secondary_view(request):
 
-    request.session['num'] += 1
-
     """print("AAAAAAAAAAAAAAAAAAAAAAAA")
     print('eyes' + str(request.GET['eyes']))
     print('class_type' + str(request.GET['class_type']))"""
