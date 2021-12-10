@@ -504,7 +504,7 @@ def create_custom_search_results():
     axies_in_graph = ""
     for axie in custom_search_axies:
         #write_to_file_append(str(axie), 'axie_all_combinations_and_price_v2_custom_search.txt')
-        axies_in_graph += str(axie)
+        axies_in_graph += '\n' + str(axie)
 
     return axies_in_graph
 
