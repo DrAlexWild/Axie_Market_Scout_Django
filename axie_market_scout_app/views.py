@@ -96,12 +96,16 @@ def secondary_view(request):
         request.GET['date_end']
     )
 
-    request.session['new_graph'] = chart
-    context = {
+    """request.session['new_graph'] = chart"""
+    """context = {
         'class_type': request.GET['class_type'],
         'eyes': request.GET['eyes'],
-    }
-    context['new_graph'] = request.session['new_graph']
+    }"""
+
+    """context['new_graph'] = request.session['new_graph']"""
+
+    context = {}
+    context['new_graph'] = chart
 
     return render(request, 'views_html/results.html', context=context)
 
