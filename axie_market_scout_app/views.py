@@ -5,56 +5,7 @@ from .utils import *
 
 # Create your views here.
 def main_view(request):
-    """Sale.objects.create(item='pizza', price='5')
-    Sale.objects.create(item='apple', price='3')
-    qs = Sale.objects.all()"""
-    #print(qs)
-    """x = [x.item for x in qs]
-    y = [y.price for y in qs]"""
-
-    """chart = routine_main(
-        "Reptile",
-        "None",
-        "None",
-        "None",
-        "None",
-        "None",
-        "None",
-        0,
-        7,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        "None",
-        0,
-        "None",
-        0,
-        "None",
-        0,
-        "None",
-        0,
-        "None",
-        0,
-        "None",
-        0,
-        "None",
-        "None"
-    )"""
-
-
-    """#request.session['new_graph'] = chart
-    request.session['num'] = 0"""
-
-
-    context = {
-        #'new_graph': request.session['new_graph'],
-        'class_type': "None",
-        'eyes': "None",
-    }
-
+    context = {}
     return render(request, 'views_html/results.html', context=context)
 
 def secondary_view(request):
@@ -95,7 +46,8 @@ def secondary_view(request):
 
     context['error_message'] = search_helper
 
-    if search_helper == "":
+    if search_helper == "":# No errors
+
         chart = routine_main(
             request.GET['class_type'],
             request.GET['eyes'],
