@@ -528,7 +528,7 @@ def search_helper_custom(class_type, eyes, mouth, back, ears, horns, tail, breed
         search_helper_array.append(str(tail) + " isn't a known Tail")
 
     try:
-        if breeds_min == '' or 0 > int(breeds_min) or int(breeds_min) > 7:
+        if 0 > int(breeds_min) or int(breeds_min) > 7:
             print("Lowest Minimum Breeds is: 0 Highest Minimum Breeds is: 7 Current: " + str(breeds_min))
             search_helper_array.append("Lowest Minimum Breeds is: 0 Highest Minimum Breeds is: 7 Current: " + str(breeds_min))
     except:
