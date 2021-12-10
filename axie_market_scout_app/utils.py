@@ -497,6 +497,203 @@ def routine_graph():
     create_point_heat()
     return create_graph()
 
+def search_helper_custom(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end):
+    search_helper_array = []
+    if class_type not in all_class_types:
+        print(str(class_type) + " isn't a known Class_Type")
+        search_helper_array.append(str(class_type) + " isn't a known Class_Type")
+
+    if eyes not in all_eyes_parts and eyes != 'None':
+        print(str(eyes) + " isn't a known Eye")
+        search_helper_array.append(str(eyes) + " isn't a known Eye")
+
+    if mouth not in all_mouth_parts and mouth != 'None':
+        print(str(mouth) + " isn't a known Mouth")
+        search_helper_array.append(str(mouth) + " isn't a known Mouth")
+
+    if back not in all_back_parts and back != 'None':
+        print(str(back) + " isn't a known Back")
+        search_helper_array.append(str(back) + " isn't a known Back")
+
+    if ears not in all_ear_parts and ears != 'None':
+        print(str(ears) + " isn't a known Ear")
+        search_helper_array.append(str(ears) + " isn't a known Ear")
+
+    if horns not in all_horn_parts and horns != 'None':
+        print(str(horns) + " isn't a known Horn")
+        search_helper_array.append(str(horns) + " isn't a known Horn")
+
+    if tail not in all_tail_parts and tail != 'None':
+        print(str(tail) + " isn't a known Tail")
+        search_helper_array.append(str(tail) + " isn't a known Tail")
+
+    try:
+        if 0 > int(breeds_min) or int(breeds_min) > 7:
+            print("Lowest Minimum Breeds is: 0 Highest Minimum Breeds is: 7 Current: " + str(breeds_min))
+            search_helper_array.append("Lowest Minimum Breeds is: 0 Highest Minimum Breeds is: 7 Current: " + str(breeds_min))
+    except:
+        print("Minimum Breeds is not a number")
+        search_helper_array.append("Minimum Breeds is not a number")
+
+    try:
+        if 0 > int(breeds_max) or int(breeds_max) > 7:
+            print("Lowest Max Breeds is: 0 Highest Max Breeds is: 7 Current: " + str(breeds_max))
+            search_helper_array.append("Lowest Max Breeds is: 0 Highest Max Breeds is: 7 Current: " + str(breeds_max))
+    except :
+        print("Max Breeds is not a number")
+        search_helper_array.append("Max Breeds is not a number")
+
+    try:
+        if 0 > float(min_value):
+            print("Min Value is bellow 0 Current: " + str(min_value))
+            search_helper_array.append("Min Value is bellow 0 Current: " + str(min_value))
+    except :
+        print("Min Value is not a number")
+        search_helper_array.append("Min Value is not a number")
+
+    try:
+        if 0 > float(max_value):
+            print("Max Value is bellow 0 Current: " + str(max_value))
+            search_helper_array.append("Max Value is bellow 0 Current: " + str(max_value))
+    except :
+        print("Max Value is not a number")
+        search_helper_array.append("Max Value is not a number")
+
+
+    try:
+        if int(min_health) > 61:
+            print("Max Health is: 61 Current: " + str(min_health))
+            search_helper_array.append("Max Health is: 61 Current: " + str(min_health))
+    except :
+        print("Health is not a number")
+        search_helper_array.append("Health is not a number")
+
+    try:
+        if int(min_speed) > 61:
+            print("Max Speed is: 61 Current: " + str(min_speed))
+            search_helper_array.append("Max Speed is: 61 Current: " + str(min_speed))
+    except :
+        print("Speed is not a number")
+        search_helper_array.append("Speed is not a number")
+
+    try:
+        if int(min_skill) > 35:
+            print("Max Skill is: 35 Current: " + str(min_skill))
+            search_helper_array.append("Max Skill is: 35 Current: " + str(min_skill))
+    except :
+        print("Skill is not a number")
+        search_helper_array.append("Skill is not a number")
+
+    try:
+        if int(min_morale) > 61:
+            print("Max Morale is: 61 Current: " + str(min_morale))
+            search_helper_array.append("Max Morale is: 61 Current: " + str(min_morale))
+    except :
+        print("Morale is not a number")
+        search_helper_array.append("Morale is not a number")
+
+    ##################################################################### genes
+
+    if eye_gene not in all_eyes_parts and eye_gene != 'None':
+        print(str(eye_gene) + " isn't a known Eye_gene")
+        search_helper_array.append(str(eye_gene) + " isn't a known Eye_gene")
+
+    try:
+        if int(eye_gene_chance_min) > 50:
+            print("Max eye_gene_chance_min is: 50 Current: " + str(eye_gene_chance_min))
+            search_helper_array.append("Max eye_gene_chance_min is: 50 Current: " + str(eye_gene_chance_min))
+    except :
+        print("eye_gene_chance_min is not a number")
+        search_helper_array.append("eye_gene_chance_min is not a number")
+    #####################################################################################
+
+    if ear_gene not in all_ear_parts and ear_gene != 'None':
+        print(str(ear_gene) + " isn't a known Ear_gene")
+        search_helper_array.append(str(ear_gene) + " isn't a known Ear_gene")
+
+    try:
+        if int(ear_gene_chance_min) > 50:
+            print("Max ear_gene_chance_min is: 50 Current: " + str(ear_gene_chance_min))
+            search_helper_array.append("Max ear_gene_chance_min is: 50 Current: " + str(ear_gene_chance_min))
+    except :
+        print("ear_gene_chance_min is not a number")
+        search_helper_array.append("ear_gene_chance_min is not a number")
+    #####################################################################################
+
+    if mouth_gene not in all_mouth_parts and mouth_gene != 'None':
+        print(str(mouth_gene) + " isn't a known Mouth_gene")
+        search_helper_array.append(str(mouth_gene) + " isn't a known Mouth_gene")
+
+    try:
+        if int(mouth_gene_chance_min) > 50:
+            print("Max mouth_gene_chance_min is: 50 Current: " + str(mouth_gene_chance_min))
+            search_helper_array.append("Max mouth_gene_chance_min is: 50 Current: " + str(mouth_gene_chance_min))
+    except :
+        print("mouth_gene_chance_min is not a number")
+        search_helper_array.append("mouth_gene_chance_min is not a number")
+    #####################################################################################
+
+    if horn_gene not in all_horn_parts and horn_gene != 'None':
+        print(str(horn_gene) + " isn't a known Horn_gene")
+        search_helper_array.append(str(horn_gene) + " isn't a known Horn_gene")
+
+    try:
+        if int(horn_gene_chace_min) > 50:
+            print("Max horn_gene_chance_min is: 50 Current: " + str(horn_gene_chace_min))
+            search_helper_array.append("Max horn_gene_chance_min is: 50 Current: " + str(horn_gene_chace_min))
+    except :
+        print("horn_gene_chance_min is not a number")
+        search_helper_array.append("horn_gene_chance_min is not a number")
+    #####################################################################################
+
+    if back_gene not in all_back_parts and back_gene != 'None':
+        print(str(back_gene) + " isn't a known Back_gene")
+        search_helper_array.append(str(back_gene) + " isn't a known Back_gene")
+
+    try:
+        if int(back_gene_chance_min) > 50:
+            print("Max back_gene_chance_min is: 50 Current: " + str(back_gene_chance_min))
+            search_helper_array.append("Max back_gene_chance_min is: 50 Current: " + str(back_gene_chance_min))
+    except :
+        print("back_gene_chance_min is not a number")
+        search_helper_array.append("back_gene_chance_min is not a number")
+    #####################################################################################
+
+    if tail_gene not in all_tail_parts and tail_gene != 'None':
+        print(str(tail_gene) + " isn't a known Tail_gene")
+        search_helper_array.append(str(tail_gene) + " isn't a known Tail_gene")
+
+    try:
+        if int(tail_gene_chance_min) > 50:
+            print("Max tail_gene_chance_min is: 50 Current: " + str(tail_gene_chance_min))
+            search_helper_array.append("Max tail_gene_chance_min is: 50 Current: " + str(tail_gene_chance_min))
+    except :
+        print("tail_gene_chance_min is not a number")
+        search_helper_array.append("tail_gene_chance_min is not a number")
+    #####################################################################################
+
+    if date_start != "None":
+        try:
+            datetime.strptime(date_start, '%d %b %Y')
+
+        except:
+            print("date_start not valid")
+            search_helper_array.append("date_start not valid")
+
+    if date_end != "None":
+        try:
+            datetime.strptime(date_end, '%d %b %Y')
+        except:
+            print("date_end not valid")
+            search_helper_array.append("date_end not valid")
+
+    #return search_helper_array
+
+    error_msg = ""
+    for error in search_helper_array:
+        error_msg += str(error) + '\n'
+    return error_msg
+
 def create_custom_search_results():
     custom_search_axies.sort(key=lambda x: x.value)
     custom_search_axies.sort(key=lambda x: datetime.strptime(x.objective_date, '%d %b %Y'), reverse=True)
