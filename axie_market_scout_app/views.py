@@ -12,6 +12,7 @@ def secondary_view(request):
 
     context = {}
 
+    #String with \n per error
     search_helper = search_helper_custom(
         request.GET['class_type'],
         request.GET['eyes'],
@@ -48,6 +49,18 @@ def secondary_view(request):
 
     if search_helper == "":# No errors
 
+        # return of chart
+        #utf-8  base-64-image??
+        """def get_graph():
+            buffer = BytesIO()
+            plt.savefig(buffer, format='png')
+            buffer.seek(0)
+            image_png = buffer.getvalue()
+            graph = base64.b64encode(image_png)
+            graph = graph.decode('utf-8')
+            buffer.close()
+        return graph"""
+
         chart = routine_main(
             request.GET['class_type'],
             request.GET['eyes'],
@@ -81,7 +94,10 @@ def secondary_view(request):
         )
 
         context['new_graph'] = chart
-        context['axies_in_graph'] = create_custom_search_results()
+
+        #String with \n per axie
+        axies_in_graph = create_custom_search_results()
+        context['axies_in_graph'] = axies_in_graph
 
     return render(request, 'views_html/results.html', context=context)
 
