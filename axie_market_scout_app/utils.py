@@ -497,6 +497,17 @@ def routine_graph():
     create_point_heat()
     return create_graph()
 
+def create_custom_search_results():
+    custom_search_axies.sort(key=lambda x: x.value)
+    custom_search_axies.sort(key=lambda x: datetime.strptime(x.objective_date, '%d %b %Y'), reverse=True)
+    #clear_file('axie_all_combinations_and_price_v2_custom_search.txt')
+    axies_in_graph = ""
+    for axie in custom_search_axies:
+        #write_to_file_append(str(axie), 'axie_all_combinations_and_price_v2_custom_search.txt')
+        axies_in_graph += str(axie)
+
+    return axies_in_graph
+
 ### Start-Up Database ###
 print("Load Started")
 routine_pre_load('axie_all_sales.txt')

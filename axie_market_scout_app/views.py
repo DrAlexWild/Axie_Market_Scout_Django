@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Sale
-from .utils import routine_main
-
+from .utils import routine_main, create_custom_search_results
 
 
 # Create your views here.
@@ -106,6 +105,7 @@ def secondary_view(request):
 
     context = {}
     context['new_graph'] = chart
+    context['axies_in_graph'] = create_custom_search_results()
 
     return render(request, 'views_html/results.html', context=context)
 
