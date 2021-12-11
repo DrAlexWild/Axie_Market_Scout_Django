@@ -8,7 +8,10 @@
     "form graph"
     "console receit";
 }
-
+img{
+    max-width:100%;
+    max-height:100%;
+}
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
