@@ -5,12 +5,8 @@
     gap: 15px 15px;
     grid-auto-flow: row;
     grid-template-areas:
-    "form ."
-    ". .";
-}
-img {
-    max-width: 100%;
-    max-height: 100%;
+    "form graph"
+    "console receit";
 }
 
 .form {
@@ -94,15 +90,8 @@ img {
 
 .eye_gene_chance_min { grid-area: eye_gene_chance_min; }
 
-.graph {
-    grid-area: graph;
-    background-color: #4f4f4f;
-}
-.console {
-    grid-area: console;
-    background-color: #006b1b;
-}
-.receit {
-    grid-area: receit;
-    background-color: #264b5d;
-}
+.graph { grid-area: graph; }
+
+.console { grid-area: console; }
+
+.receit { grid-area: receit; }
