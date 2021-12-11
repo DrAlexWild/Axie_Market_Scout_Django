@@ -93,3 +93,16 @@ img {
 .ear_gene_chance_min { grid-area: ear_gene_chance_min; }
 
 .eye_gene_chance_min { grid-area: eye_gene_chance_min; }
+
+.graph {
+    grid-area: graph;
+    background-color: #4f4f4f;
+}
+.console {
+    grid-area: console;
+    background-color: #006b1b;
+}
+.receit {
+    grid-area: receit;
+    background-color: #264b5d;
+}
