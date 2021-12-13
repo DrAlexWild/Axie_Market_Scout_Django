@@ -5,7 +5,10 @@
     <form action='/results' method="GET" class="graph_form">
         <div class="form">
             <div class="class">
-                <input  type="text" name="class_type" placeholder="class_type" />
+                <select>
+                    <option value="volvo">Reptile</option>
+                    <option value="saab">None</option>
+                </select>
             </div>
             <div class="eyes">
                 <input  type="text" name="eyes" placeholder="eyes" />
@@ -106,7 +109,7 @@
     </div>
     <div class="receit">
         <p>Axies in Graph:
-            <pre>{{axies_in_graph}}</pre>
+        <pre>{{axies_in_graph}}</pre>
         </p>
     </div>
 </div>
