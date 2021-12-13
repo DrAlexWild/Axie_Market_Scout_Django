@@ -21,7 +21,6 @@ def get_graph():
 def get_plot(x, y):
 
     """plt.switch_backend('AGG')
-    plt.figure(figsize=(8, 5))
     plt.title('sales of items')
     plt.plot(x,y)
     plt.xticks(rotation=45)
@@ -475,6 +474,7 @@ def create_graph():
     plt.box(True)
 
     #plt.tight_layout(True)
+    plt.figure(figsize=(8, 5))
     plt.savefig(fname='img.png')
     #plt.show()
 
