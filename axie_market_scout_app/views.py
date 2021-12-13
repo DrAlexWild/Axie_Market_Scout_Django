@@ -71,8 +71,8 @@ def secondary_view(request):
             request.GET['tail'],
             int(request.GET['breeds_min']),
             int(request.GET['breeds_max']),
-            int(request.GET['min_value']),
-            int(request.GET['max_value']),
+            float(request.GET['min_value']),
+            float(request.GET['max_value']),
             int(request.GET['min_health']),
             int(request.GET['min_speed']),
             int(request.GET['min_skill']),
@@ -103,8 +103,8 @@ def secondary_view(request):
         context['tail'] = request.GET['tail']
         context['breeds_min'] = int(request.GET['breeds_min'])
         context['breeds_max'] = int(request.GET['breeds_max'])
-        context['min_value'] = int(request.GET['min_value'])
-        context['max_value'] = int(request.GET['max_value'])
+        context['min_value'] = float(request.GET['min_value'])
+        context['max_value'] = float(request.GET['max_value'])
         context['min_health'] = int(request.GET['min_health'])
         context['min_speed'] = int(request.GET['min_speed'])
         context['min_skill'] = int(request.GET['min_skill'])
