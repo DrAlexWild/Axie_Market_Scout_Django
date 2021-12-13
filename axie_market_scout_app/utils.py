@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 
 def get_graph():
     buffer = BytesIO()
-    plt.figure(figsize=(8, 5))
+    #plt.figure(figsize=(8, 5))
     plt.savefig(buffer, format='png')
     buffer.seek(0)
     image_png = buffer.getvalue()
