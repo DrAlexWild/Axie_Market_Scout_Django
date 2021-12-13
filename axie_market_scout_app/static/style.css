@@ -102,12 +102,16 @@ img {
     max-height: 500px;
 }
 
-.console { grid-area: console; }
+.console {
+    overflow: auto;
+    grid-area: console;
+    font-size: 12px;
+}
 
 .receit {
-    max-height: 400px;
+    height: 500px;
     margin-top: auto;
     overflow: auto;
     grid-area: receit;
-    font-size: 10px;
+    font-size: 12px;
 }
