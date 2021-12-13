@@ -95,6 +95,34 @@ def secondary_view(request):
 
         context['new_graph'] = chart
         context['class_type'] = request.GET['class_type']
+        context['eyes'] = request.GET['eyes']
+        context['mouth'] = request.GET['mouth']
+        context['back'] = request.GET['back']
+        context['ears'] = request.GET['ears']
+        context['horns'] = request.GET['horns']
+        context['tail'] = request.GET['tail']
+        context['breeds_min'] = int(request.GET['breeds_min'])
+        context['breeds_max'] = int(request.GET['breeds_max'])
+        context['min_value'] = int(request.GET['min_value'])
+        context['max_value'] = int(request.GET['max_value'])
+        context['min_health'] = int(request.GET['min_health'])
+        context['min_speed'] = int(request.GET['min_speed'])
+        context['min_skill'] = int(request.GET['min_skill'])
+        context['min_morale'] = int(request.GET['min_morale'])
+        context['eye_gene'] = request.GET['eye_gene']
+        context['eye_gene_chance_min'] = int(request.GET['eye_gene_chance_min'])
+        context['ear_gene'] = request.GET['ear_gene']
+        context['ear_gene_chance_min'] = int(request.GET['ear_gene_chance_min'])
+        context['mouth_gene'] = request.GET['mouth_gene']
+        context['mouth_gene_chance_min'] = int(request.GET['mouth_gene_chance_min'])
+        context['horn_gene'] = request.GET['horn_gene']
+        context['horn_gene_chance_min'] = int(request.GET['horn_gene_chance_min'])
+        context['back_gene'] = request.GET['back_gene']
+        context['back_gene_chance_min'] = int(request.GET['back_gene_chance_min'])
+        context['tail_gene'] = request.GET['tail_gene']
+        context['tail_gene_chance_min'] = int(request.GET['tail_gene_chance_min'])
+        context['date_start'] = request.GET['date_start']
+        context['date_end'] = request.GET['date_end']
 
         #String with \n per axie
         axies_in_graph = create_custom_search_results()
