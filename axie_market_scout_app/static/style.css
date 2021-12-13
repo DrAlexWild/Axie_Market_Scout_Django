@@ -1,0 +1,99 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "form graph"
+    "console receit";
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "class . . ."
+    "eyes mouth . ."
+    "back ears . ."
+    "horns tail . ."
+    "breeds_min breeds_max min_value max_value"
+    "health speed skill morale"
+    "eye_gene eye_gene_chance_min . ."
+    "ear_gene ear_gene_chance_min . ."
+    "mouth_gene mouth_gene_chance_min . ."
+    "horn_gene horn_gene_chance_min . ."
+    "back_gene back_gene_chance_min . ."
+    "tail_gene tail_gene_chance_min . ."
+    "date_start date_end search .";
+    grid-area: form;
+}
+
+.class { grid-area: class; }
+
+.eyes { grid-area: eyes; }
+
+.mouth { grid-area: mouth; }
+
+.back { grid-area: back; }
+
+.ears { grid-area: ears; }
+
+.horns { grid-area: horns; }
+
+.tail { grid-area: tail; }
+
+.breeds_min { grid-area: breeds_min; }
+
+.breeds_max { grid-area: breeds_max; }
+
+.min_value { grid-area: min_value; }
+
+.max_value { grid-area: max_value; }
+
+.health { grid-area: health; }
+
+.speed { grid-area: speed; }
+
+.skill { grid-area: skill; }
+
+.morale { grid-area: morale; }
+
+.eye_gene { grid-area: eye_gene; }
+
+.ear_gene { grid-area: ear_gene; }
+
+.mouth_gene { grid-area: mouth_gene; }
+
+.horn_gene { grid-area: horn_gene; }
+
+.back_gene { grid-area: back_gene; }
+
+.tail_gene { grid-area: tail_gene; }
+
+.date_start { grid-area: date_start; }
+
+.date_end { grid-area: date_end; }
+
+.tail_gene_chance_min { grid-area: tail_gene_chance_min; }
+
+.back_gene_chance_min { grid-area: back_gene_chance_min; }
+
+.horn_gene_chance_min { grid-area: horn_gene_chance_min; }
+
+.mouth_gene_chance_min { grid-area: mouth_gene_chance_min; }
+
+.ear_gene_chance_min { grid-area: ear_gene_chance_min; }
+
+.eye_gene_chance_min { grid-area: eye_gene_chance_min; }
+
+.search { grid-area: search; }
+
+.graph { grid-area: graph; }
+
+.console { grid-area: console; }
+
+.receit { grid-area: receit; }
