@@ -97,11 +97,11 @@ img {
 
 .search { grid-area: search; }
 
-.graph {
-    grid-area: graph;
-    max-height: 500px;
-}
+.graph { grid-area: graph; }
 
 .console { grid-area: console; }
 
-.receit { grid-area: receit; }
+.receit {
+    overflow: auto;
+    grid-area: receit;
+}
