@@ -5,10 +5,11 @@
     <form action='/results' method="GET" class="graph_form">
         <div class="form">
             <div class="class">
-                <select name="class_type">
-                    <option value="Reptile">Reptile</option>
-                    <option value="None">None</option>
-                </select>
+                <input type="text" name="class_type" list="class_type_list">
+                <datalist id="class_type_list">
+                    <option value="Reptile">
+                    <option value="Beast">
+                </datalist>
             </div>
             <div class="eyes">
                 <input  type="text" name="eyes" placeholder="eyes" />
