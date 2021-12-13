@@ -9,11 +9,6 @@
     "console receit";
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -35,6 +30,11 @@ img {
     "tail_gene tail_gene_chance_min . ."
     "date_start date_end search .";
     grid-area: form;
+}
+
+img {
+    max-width: 100%;
+    max-height: 500px;
 }
 
 .class { grid-area: class; }
@@ -97,11 +97,16 @@ img {
 
 .search { grid-area: search; }
 
-.graph { grid-area: graph; }
+.graph {
+    grid-area: graph;
+    max-height: 500px;
+}
 
 .console { grid-area: console; }
 
 .receit {
+    max-height: 500px;
     overflow: auto;
     grid-area: receit;
+    font-size: 10px;
 }
