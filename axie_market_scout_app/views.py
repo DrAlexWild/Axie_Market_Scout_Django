@@ -94,6 +94,7 @@ def secondary_view(request):
         )
 
         context['new_graph'] = chart
+        context['class_type'] = request.GET['class_type']
 
         #String with \n per axie
         axies_in_graph = create_custom_search_results()
