@@ -11,7 +11,7 @@
 
 img {
     max-width: 100%;
-    max-height: 500px;
+    max-height: 100%;
 }
 
 .form {
@@ -97,7 +97,10 @@ img {
 
 .search { grid-area: search; }
 
-.graph { grid-area: graph; }
+.graph {
+    grid-area: graph;
+    max-height: 500px;
+}
 
 .console { grid-area: console; }
 
