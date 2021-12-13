@@ -6,7 +6,7 @@ from .utils import *
 # Create your views here.
 def main_view(request):
     context = {}
-    return render(request, 'views_html/results.html', context=context)
+    return render(request, 'views_html/index.html', context=context)
 
 def secondary_view(request):
 
