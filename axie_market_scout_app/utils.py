@@ -43,9 +43,9 @@ reptile_eye_parts = ['Crimson Gecko', 'Dokuganryu', 'Gecko', 'Kabuki', 'Scar', '
 beast_ear_parts = ['Belieber', 'Innocent Lamb', 'Merry Lamb', 'Nut Cracker', 'Nyan', 'Point Nyan', 'Puppy', 'Zen']
 bug_ear_parts = ['Beetle Spike', 'Ear Breathing', 'Earwing', 'Larva', 'Leaf Bug', 'Mon', 'Tassels', 'Vector']
 bird_ear_parts = ['Curly', 'Early Bird', 'Hearth Cheek', 'Karimata', 'Owl', 'Peace Maker', 'Pink Cheek', 'Risly Bird']
-plant_ear_parts = ['Clover', 'Hollow', 'Leafy', 'Lotus', 'Maiako', 'Pinecones', 'Rosa', 'Sakura', 'The Last Leaft']
+plant_ear_parts = ['Clover', 'Hollow', 'Leafy', 'Lotus', 'Maiako', 'Pinecones', 'Rosa', 'Sakura', 'The Last Leaf']
 aquatic_ear_parts = ['Bubblemaker', 'Gill', 'Inkling', 'Nimo', 'Red Nimo', 'Seaslug', 'Tiny Fan']
-reptile_ear_parts = ['Curved Spine', 'Deadly Pogona', 'Friezaed', 'Pogona', 'Sidebarb', 'Small Frill', 'Swirl']
+reptile_ear_parts = ['Curved Spine', 'Deadly Pogona', 'Friezard', 'Pogona', 'Sidebarb', 'Small Frill', 'Swirl']
 
 beast_back_parts = ['Furball', 'Hamaya', 'Hasagi', 'Hero', 'Jaguar', 'Risky Beast', 'Ronin', 'Timber']
 bug_back_parts = ['Buzz Buzz', 'Candy Canes', 'Garish Worm', 'Sandal', 'Scarab', 'Snail Shell', 'Spiky Wing', 'Starry Shell']
