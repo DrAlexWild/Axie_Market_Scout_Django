@@ -693,7 +693,7 @@ def search_helper_custom(class_type, eyes, mouth, back, ears, horns, tail, breed
     error_msg = ""
     for error in search_helper_array:
         error_msg += str(error) + '\n'
-    return error_msg
+    return error_msg.strip()
 
 def create_custom_search_results():
     custom_search_axies.sort(key=lambda x: x.value)
@@ -704,7 +704,7 @@ def create_custom_search_results():
         #write_to_file_append(str(axie), 'axie_all_combinations_and_price_v2_custom_search.txt')
         axies_in_graph += str(axie) + '\n'
 
-    return axies_in_graph
+    return axies_in_graph.strip()
 
 ### Start-Up Database ###
 print("Load Started")
