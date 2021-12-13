@@ -105,7 +105,8 @@ img {
 .console { grid-area: console; }
 
 .receit {
-    max-height: 500px;
+    max-height: 400px;
+    margin-top: auto;
     overflow: auto;
     grid-area: receit;
     font-size: 10px;
