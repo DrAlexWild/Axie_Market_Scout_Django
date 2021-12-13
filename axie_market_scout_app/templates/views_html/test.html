@@ -1,0 +1,124 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<h1>Hello</h1>
+
+
+<div class="container">
+    <div>
+
+        <form action='/results' method="GET" class="graph_form">
+            <div class="form">
+                <div class="class">
+                    <input  type="text" name="class_type" placeholder="class_type" />
+                </div>
+                <div class="eyes">
+                    <input  type="text" name="eyes" placeholder="eyes" />
+                </div>
+                <div class="mouth">
+                    <input  type="text" name="mouth" placeholder="mouth" />
+                </div>
+                <div class="back">
+                    <input  type="text" name="back" placeholder="back" />
+                </div>
+                <div class="ears">
+                    <input  type="text" name="ears" placeholder="ears" />
+                </div>
+                <div class="horns">
+                    <input  type="text" name="horns" placeholder="horns" />
+                </div>
+                <div class="tail">
+                    <input  type="text" name="tail" placeholder="tail" />
+                </div>
+                <div class="breeds_min">
+                    <input  type="text" name="breeds_min" placeholder="breeds_min" />
+                </div>
+                <div class="breeds_max">
+                    <input  type="text" name="breeds_max" placeholder="breeds_max" />
+                </div>
+                <div class="min_value">
+                    <input  type="text" name="min_value" placeholder="min_value" />
+                </div>
+                <div class="max_value">
+                    <input  type="text" name="max_value" placeholder="max_value" />
+                </div>
+                <div class="health">
+                    <input  type="text" name="min_health" placeholder="health" />
+                </div>
+                <div class="speed">
+                    <input  type="text" name="min_speed" placeholder="speed" />
+                </div>
+                <div class="skill">
+                    <input  type="text" name="min_skill" placeholder="skill" />
+                </div>
+                <div class="morale">
+                    <input  type="text" name="min_morale" placeholder="morale" />
+                </div>
+                <div class="eye_gene">
+                    <input  type="text" name="eye_gene" placeholder="eye_gene" />
+                </div>
+                <div class="ear_gene">
+                    <input  type="text" name="eye_gene_chance_min" placeholder="eye_gene_chance_min" />
+                </div>
+                <div class="mouth_gene">
+                    <input  type="text" name="ear_gene" placeholder="ear_gene" />
+                </div>
+                <div class="horn_gene">
+                    <input  type="text" name="ear_gene_chance_min" placeholder="ear_gene_chance_min" />
+                </div>
+                <div class="back_gene">
+                    <input  type="text" name="mouth_gene" placeholder="mouth_gene" />
+                </div>
+                <div class="tail_gene">
+                    <input  type="text" name="mouth_gene_chance_min" placeholder="mouth_gene_chance_min" />
+                </div>
+                <div class="date_start">
+                    <input  type="text" name="horn_gene" placeholder="horn_gene" />
+                </div>
+                <div class="date_end">
+                    <input  type="text" name="horn_gene_chance_min" placeholder="horn_gene_chance_min" />
+                </div>
+                <div class="tail_gene_chance_min">
+                    <input  type="text" name="back_gene" placeholder="back_gene" />
+                </div>
+                <div class="back_gene_chance_min">
+                    <input  type="text" name="back_gene_chance_min" placeholder="back_gene_chance_min" />
+                </div>
+                <div class="horn_gene_chance_min">
+                    <input  type="text" name="tail_gene" placeholder="tail_gene" />
+                </div>
+                <div class="mouth_gene_chance_min">
+                    <input  type="text" name="tail_gene_chance_min" placeholder="tail_gene_chance_min" />
+                </div>
+                <div class="ear_gene_chance_min">
+                    <input  type="text" name="date_start" placeholder="date_start" />
+                </div>
+                <div class="eye_gene_chance_min">
+                    <input  type="text" name="date_end" placeholder="date_end" />
+                </div>
+                <input  type="submit" value="Save"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph">
+        <img src="data:image/png;base64, {{new_graph}}">
+    </div>
+
+    <div class="console">
+        <p>Console:
+        <pre>
+                {{error_message}}
+            </pre>
+        </p>
+    </div>
+
+    <div class="receit">
+        <p>Axies in Graph:
+        <pre>
+                {{axies_in_graph}}
+            </pre>
+        </p>
+    </div>
+
+</div>
+

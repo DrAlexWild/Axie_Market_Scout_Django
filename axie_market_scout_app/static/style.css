@@ -8,10 +8,7 @@
     "form graph"
     "console receit";
 }
-img{
-    max-width:100%;
-    max-height:100%;
-}
+
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -31,7 +28,7 @@ img{
     "horn_gene horn_gene_chance_min . ."
     "back_gene back_gene_chance_min . ."
     "tail_gene tail_gene_chance_min . ."
-    "date_start date_end . .";
+    "date_start date_end search .";
     grid-area: form;
 }
 
@@ -92,6 +89,8 @@ img{
 .ear_gene_chance_min { grid-area: ear_gene_chance_min; }
 
 .eye_gene_chance_min { grid-area: eye_gene_chance_min; }
+
+.search { grid-area: search; }
 
 .graph { grid-area: graph; }
 

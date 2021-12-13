@@ -1,11 +1,4 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-<h1>Hello</h1>
-
-
 <div class="container">
-    <div>
-
     <form action='/results' method="GET" class="graph_form">
         <div class="form">
             <div class="class">
@@ -95,30 +88,26 @@
             <div class="eye_gene_chance_min">
                 <input  type="text" name="date_end" placeholder="date_end" />
             </div>
-            <input  type="submit" value="Save"/>
+            <div class="search">
+                <input  type="submit" value="Search"/>
+            </div>
         </div>
     </form>
-    </div>
-
     <div class="graph">
         <img src="data:image/png;base64, {{new_graph}}">
     </div>
-
     <div class="console">
         <p>Console:
-            <pre>
+        <pre>
                 {{error_message}}
             </pre>
         </p>
     </div>
-
     <div class="receit">
         <p>Axies in Graph:
-            <pre>
+        <pre>
                 {{axies_in_graph}}
             </pre>
         </p>
     </div>
-
 </div>
-
