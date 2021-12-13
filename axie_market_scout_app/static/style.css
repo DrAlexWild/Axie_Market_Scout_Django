@@ -1,12 +1,13 @@
-.container {
-    color: white;
-    font-family:sans-serif;
-
+body{
     background-color: #3a3f50;
     opacity: 1;
     background: radial-gradient(circle, transparent 20%, #3a3f50 20%, #3a3f50 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #3a3f50 20%, #3a3f50 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#000000 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #000000 1.4000000000000001px, #3a3f50 1.4000000000000001px) -0.7000000000000001px 0;
     background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+}
 
+.container {
+    color: white;
+    font-family:sans-serif;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr 0.5fr;
