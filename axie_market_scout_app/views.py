@@ -51,17 +51,7 @@ def secondary_view(request):
 
         # return of chart
         #utf-8  base-64-image??
-        """def get_graph():
-            buffer = BytesIO()
-            plt.savefig(buffer, format='png')
-            buffer.seek(0)
-            image_png = buffer.getvalue()
-            graph = base64.b64encode(image_png)
-            graph = graph.decode('utf-8')
-            buffer.close()
-        return graph"""
-
-        chart = routine_main(
+        chart = routine_graph_scatter_heat_plot(
             request.GET['class_type'],
             request.GET['eyes'],
             request.GET['mouth'],
@@ -125,8 +115,11 @@ def secondary_view(request):
         context['date_end'] = request.GET['date_end']
 
         #String with \n per axie
-        axies_in_graph = create_custom_search_results()
+        axies_in_graph = create_receipt()[0]
         context['axies_in_graph'] = axies_in_graph
+
+        average_price = create_receipt()[1]
+        context['average_price'] = average_price
 
     return render(request, 'views_html/results.html', context=context)
 

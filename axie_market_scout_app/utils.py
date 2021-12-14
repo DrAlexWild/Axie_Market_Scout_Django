@@ -695,35 +695,29 @@ def search_helper_custom(class_type, eyes, mouth, back, ears, horns, tail, breed
         error_msg += str(error) + '\n'
     return error_msg.strip()
 
-def create_custom_search_results():
+def create_receipt():
     custom_search_axies.sort(key=lambda x: x.value)
     custom_search_axies.sort(key=lambda x: datetime.strptime(x.objective_date, '%d %b %Y'), reverse=True)
-    #clear_file('axie_all_combinations_and_price_v2_custom_search.txt')
-    axies_in_graph = ""
-    for axie in custom_search_axies:
-        #write_to_file_append(str(axie), 'axie_all_combinations_and_price_v2_custom_search.txt')
-        axies_in_graph += str(axie) + '\n'
 
-    return axies_in_graph.strip()
+    axies_in_graph = ""
+    total_axies = 0
+    total_value = 0
+    for axie in custom_search_axies:
+        axies_in_graph += str(axie) + '\n'
+        total_axies += 1
+        total_value += axie.value
+
+    return [axies_in_graph.strip(), total_axies/total_value]
+    #return axies_in_graph.strip()
+
+
+def routine_graph_scatter_heat_plot(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end):
+    custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end)
+    return routine_graph()
+
 
 ### Start-Up Database ###
 print("Load Started")
 routine_pre_load('axie_all_sales.txt')
 print("Load completed")
 ### Start-Up Database ###
-
-def routine_main(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end):
-    """if search_helper(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min):
-    """#routine_pre_load()
-    """global raw_data
-    raw_data = read_data('axie_all_combinations_and_price_v2.txt')
-    create_data()"""
-    #print_axies()
-    #print(complex_axies)
-    #print("here")
-    custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end)
-    #create_custom_search_results()
-    return routine_graph()
-    """else:
-        print("Will Fail to search with current attributes")"""
-
