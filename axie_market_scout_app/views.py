@@ -80,7 +80,8 @@ def secondary_view(request):
             request.GET['tail_gene'],
             int(request.GET['tail_gene_chance_min']),
             request.GET['date_start'],
-            request.GET['date_end']
+            request.GET['date_end'],
+            int(request.GET['purity'])
         )
 
         context['new_graph'] = chart
@@ -113,6 +114,7 @@ def secondary_view(request):
         context['tail_gene_chance_min'] = int(request.GET['tail_gene_chance_min'])
         context['date_start'] = request.GET['date_start']
         context['date_end'] = request.GET['date_end']
+        context['purity'] = request.GET['purity']
 
         #String with \n per axie
         axies_in_graph = create_receipt()[0]

@@ -296,7 +296,7 @@ def create_data():
 
 ### Search Engine ###
 
-def custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end):
+def custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end, purity):
     global custom_search_axies
     custom_search_axies = []
 
@@ -402,10 +402,11 @@ def custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, 
                 if axie.attributes[0] >= min_health and axie.attributes[1] >= min_speed and axie.attributes[2] >= min_skill and axie.attributes[3] >= min_morale:
                     if (breeds_min <= axie.breeds <= breeds_max) and (axie.value <= max_value or max_value == 0) and (axie.value >= min_value or min_value == 0):
                         if (class_type == axie.class_type or class_type == 'None') and (eyes == axie.genes_dominant[0] or eyes == 'None') and (mouth == axie.genes_dominant[2] or mouth == 'None') and (back == axie.genes_dominant[4] or back == 'None') and (ears == axie.genes_dominant[1] or ears == 'None') and (horns == axie.genes_dominant[3] or horns == 'None') and (tail == axie.genes_dominant[5] or tail == 'None'):
-                            custom_search_axies.append(axie)
-                            #print(ear_gene_chance)
-                            #print(axie.objective_date)
-                            print(axie)
+                            if int(axie.purity[0:3].replace('%', '')) >= purity:
+                                custom_search_axies.append(axie)
+                                #print(ear_gene_chance)
+                                #print(axie.objective_date)
+                                print(axie)
 
     global title_search
     title_search = "Class: " + str(class_type) + " Eyes: " + str(eyes) + " Mouth: " + str(mouth) + " Back: " + str(back) + " Ears: " + str(ears) + " Horns: " + str(horns) + " Tail: " + str(tail) + '\n' + " Breeds_min: " + str(breeds_min) + " Breeds_max: " + str(breeds_max) + " Max_value: " + str(max_value) + " Min_health: " + str(min_health) + " Min_speed: " + str(min_speed) + " Min_skill: " + str(min_skill) + " Min_morale: " + str(min_morale)
@@ -711,8 +712,8 @@ def create_receipt():
     #return axies_in_graph.strip()
 
 
-def routine_graph_scatter_heat_plot(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end):
-    custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end)
+def routine_graph_scatter_heat_plot(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end, purity):
+    custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, breeds_max, min_value, max_value, min_health, min_speed, min_skill, min_morale, eye_gene, eye_gene_chance_min, ear_gene, ear_gene_chance_min, mouth_gene, mouth_gene_chance_min, horn_gene, horn_gene_chace_min, back_gene, back_gene_chance_min, tail_gene, tail_gene_chance_min, date_start, date_end, purity)
     return routine_graph()
 
 
