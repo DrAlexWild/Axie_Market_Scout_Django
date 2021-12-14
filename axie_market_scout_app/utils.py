@@ -707,7 +707,7 @@ def create_receipt():
         total_axies += 1
         total_value += axie.value
 
-    return [axies_in_graph.strip(), total_axies/total_value]
+    return [axies_in_graph.strip(), str(total_value/total_axies)[:4]]
     #return axies_in_graph.strip()
 
 
