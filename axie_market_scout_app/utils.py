@@ -402,7 +402,7 @@ def custom_search(class_type, eyes, mouth, back, ears, horns, tail, breeds_min, 
                 if axie.attributes[0] >= min_health and axie.attributes[1] >= min_speed and axie.attributes[2] >= min_skill and axie.attributes[3] >= min_morale:
                     if (breeds_min <= axie.breeds <= breeds_max) and (axie.value <= max_value or max_value == 0) and (axie.value >= min_value or min_value == 0):
                         if (class_type == axie.class_type or class_type == 'None') and (eyes == axie.genes_dominant[0] or eyes == 'None') and (mouth == axie.genes_dominant[2] or mouth == 'None') and (back == axie.genes_dominant[4] or back == 'None') and (ears == axie.genes_dominant[1] or ears == 'None') and (horns == axie.genes_dominant[3] or horns == 'None') and (tail == axie.genes_dominant[5] or tail == 'None'):
-                            if int(axie.purity[0:3].replace('%', '')) >= purity:
+                            if int(axie.purity[3:6].replace('%', '')) >= purity:
                                 custom_search_axies.append(axie)
                                 #print(ear_gene_chance)
                                 #print(axie.objective_date)
